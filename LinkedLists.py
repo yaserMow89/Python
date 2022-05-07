@@ -113,3 +113,19 @@ def insert_after_value(self, data_after, data_to_insert):
                 itr.next = itr.next.next
                 break
             itr = itr.next
+
+if __name__ == '__main__':
+    ll = LinkedList()
+    ll.insert_values(["banana","mango","grapes","orange"])
+    ll.print()
+    ll.insert_after_value("mango","apple")
+    ll.print()
+    ll.remove_by_value("orange")
+    ll.print()
+    ll.remove_by_value("figs")
+    ll.print()
+    ll.remove_by_value("banana")
+    ll.remove_by_value("mango")
+    ll.remove_by_value("apple")
+    ll.remove_by_value("grapes")
+    ll.print()
