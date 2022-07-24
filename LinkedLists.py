@@ -1,4 +1,6 @@
-## Linked List
+# from select import select
+
+
 class Node:
     def __init__(self, data = None, next = None):
         self.data = data
@@ -67,24 +69,20 @@ class LinkedList:
     def insert_at(self, index, data):
         if index < 0 or index > self.get_length():
             raise Exception ("Invalid Index")
-
         if index == 0:
             self.insert_at_beginning(data)
-
+        
         count = 0 
         itr = self.head
-        
         while itr:
-
             if count + 1 == index:
                 node = Node(data, itr.next)
                 itr.next = node
                 break
             itr = itr.next
             count += 1
-            
 
-def insert_after_value(self, data_after, data_to_insert):
+    def insert_after_value(self, data_after, data_to_insert):
         if self.head is None:
             return
         if self.head.data == data_after:
@@ -114,6 +112,8 @@ def insert_after_value(self, data_after, data_to_insert):
                 break
             itr = itr.next
 
+        
+
 if __name__ == '__main__':
     ll = LinkedList()
     ll.insert_values(["banana","mango","grapes","orange"])
@@ -129,3 +129,7 @@ if __name__ == '__main__':
     ll.remove_by_value("apple")
     ll.remove_by_value("grapes")
     ll.print()
+
+    # Double linked lists
+
+    
